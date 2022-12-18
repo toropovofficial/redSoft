@@ -56,7 +56,7 @@ export default {
 
       preparedProductList = preparedProductListForSave(preparedProductList, id);
 
-      this.$store.dispatch('loadDefaultProductList', preparedProductList);
+      this.$store.dispatch('changeDefaultProductStatus', id);
 
       this.$store.dispatch('updateProductsList', preparedProductList, id);
 

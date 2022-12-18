@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import { getProductListByPhrase } from '../helpers/helpers';
 import loadPost from '../services/services';
+import validationRules from '../lib/utils/validate';
 
 Vue.use(Vuex);
 
@@ -62,6 +63,13 @@ export default new Vuex.Store({
     setDefaultProjectList(state, values) {
       state.defaultProductsList = values;
     },
+    setDefaultProductStatus(state, id) {
+      const product = state.defaultProductsList.find((item) => item.id === id);
+
+      if (validationRules.isNotUndefined(product)) {
+        product.status = 'selected';
+      }
+    },
     setLoadingStatus(state, productId) {
       state.loading = {
         status: true,
@@ -81,6 +89,9 @@ export default new Vuex.Store({
     },
     loadDefaultProductList(ctx, list) {
       ctx.commit('setDefaultProjectList', list);
+    },
+    changeDefaultProductStatus(ctx, id) {
+      ctx.commit('setDefaultProductStatus', id);
     },
     loadProducts(ctx, val) {
       if (typeof val === 'undefined' || val === '') {
@@ -105,7 +116,7 @@ export default new Vuex.Store({
       ctx.commit('resetLoadingStatus');
       ctx.commit('setProductsList', list);
 
-      localStorage.setItem('productList', JSON.stringify(list));
+      localStorage.setItem('productList', JSON.stringify(ctx.state.defaultProductsList));
     },
   },
   modules: {
