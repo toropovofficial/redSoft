@@ -1,0 +1,13 @@
+.global-notifications-system {
+  position: fixed;
+  z-index: 10500;
+  top: 2px;
+  right: 8px;
+}
+
+.list-enter-active, .list-leave-active {
+  transition: all .5s;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+}

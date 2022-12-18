@@ -1,0 +1,50 @@
+.rs-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F4F6F9;
+  min-height: 48px;
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    margin-right: 7px;
+  }
+}
+
+.size {
+  &-medium {
+    width: 112px;
+  }
+
+  &-large {
+    width: 118px;
+  }
+
+  &-extra-large {
+    width: 122px;
+  }
+}
+
+.type {
+  &-active {
+    background: #382E2B;
+
+    &:hover {
+    background: #776763;
+  }
+  }
+
+  &-selected {
+    background: #5B3A32;
+  }
+
+  &-search {
+    background: #382E2B;
+  }
+}
+
+.disabled {
+  background: #C1B4B1;
+  cursor: default;
+}

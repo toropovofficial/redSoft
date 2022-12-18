@@ -1,0 +1,14 @@
+.catalog {
+  min-height: 600px;
+  padding-top: 45px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

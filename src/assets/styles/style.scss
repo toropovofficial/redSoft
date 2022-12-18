@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "MerriweatherRegular";
+  src:  url("../fonts/Merriweather-Regular.ttf");
+}
+@font-face {
+  font-family: "MerriweatherBold";
+  src: url('../fonts//Merriweather-Black.ttf');
+}
+
+@font-face {
+  font-family: "MerriweatherLight";
+  src: url('../fonts/Merriweather-Light.ttf');
+}
+
+@import url('./catalog.scss');
+@import url('./moduleNotification.scss');
+@import url('./header.scss');
+@import url('./button.scss');
+@import url('./card.scss');
+@import url('./form.scss');
+@import url('./input.scss');
+@import url('./preloader.scss');
+@import url('./notification.scss');
+@import url('./nav.scss');
+@import url('./container.scss');
+@import url('./footer.scss');
+
+* {
+  box-sizing: border-box;
+  font-family: "MerriweatherRegular";
+  font-style: normal;
+  font-weight: 400;
+}
+
+html, body, p, h1, h2, h3, ul{
+margin: 0;
+padding: 0
+}
+
+h1 {
+  font-family: "MerriweatherBold";
+}
+
+h2 {
+  font-family: "MerriweatherRegular";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
