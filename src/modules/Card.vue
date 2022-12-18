@@ -60,7 +60,7 @@ export default {
       return `${getFormattedPrice(this.card.oldPrice)} $`;
     },
     buttonMessage() {
-      if (this.isSelected) {
+      if (this.isSelected && !this.loading) {
         return 'В корзине';
       }
 

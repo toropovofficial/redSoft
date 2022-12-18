@@ -5,7 +5,7 @@
     @click="handleClick"
   >
     <img
-      v-if="isSelected"
+      v-if="isSelected && !loading"
       class="rs-button__icon"
       src="../assets/image/check.png"
       alt="check"
